@@ -1,0 +1,44 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo{
+    height: 25px;
+    object-fit: contain;
+    margin-left: 1rem;
+}
+
+.header__left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.header__center{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px black solid;
+    width: 40%;
+}
+
+.header__center > input{
+    flex: 1;
+    /* background-color: lightgray; */
+    /* border: none; */
+}
+
+.header__right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__icon{
+    margin-right: 0.5rem;
+}

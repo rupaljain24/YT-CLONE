@@ -1,0 +1,26 @@
+.sidebarrow{
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 1rem;
+}
+.sidebarrow__title{
+    font-size: 12px;
+    margin-left: 1rem;
+    flex: 1;
+}
+.sidebar__icon{
+    margin-left:1rem ;
+    color: #606060;
+    
+}
+.sidebarrow:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.sidebarrow:hover > .sidebar__icon{
+    color: red;
+}
+.sidebarrow.selected{
+    background-color: lightgray;
+}
