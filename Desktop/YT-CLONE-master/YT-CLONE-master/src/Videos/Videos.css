@@ -1,0 +1,12 @@
+.videos__main{
+    flex: 0.8;
+    background-color: #f9f9f9;
+    padding: 1rem;
+}
+.videos.h2{
+    padding-right: 1rem;
+}
+.recommended_videos{
+    display: flex;
+    flex-wrap: wrap;
+}
