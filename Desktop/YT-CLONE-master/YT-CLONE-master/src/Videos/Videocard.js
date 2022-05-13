@@ -37,7 +37,7 @@ function Videocard({id,snippet,statistics}) {
     <div className="video_description">
       <h4>{title}</h4>
       <p>{channel}</p>
-      <p>{views} views •<ReactTimeAgo date={timestamp} locale="en-US"/></p>
+      <p>{views} views • <ReactTimeAgo date={timestamp} locale="en-US"/></p>
       {/* <p>{views} views • {timestamp}</p> */}
     </div>
     </div>

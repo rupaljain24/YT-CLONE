@@ -8,18 +8,9 @@ import AppsIcon from '@material-ui/icons/Apps';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import Avatar from '@material-ui/core/Avatar';
 import { useState } from 'react';
-import {useNavigate} from "react-router-dom";
-
 
 function Header() {
   const [searchTerm,setSearchTerm]=useState("");
-
-  const navigate=useNavigate();
-
-  const handleSearch=()=>{
-    navigate("/search");  
-    console.log("button Clickd");
-  }
   return (
     <div className='header'> 
         <div className='header__left'>
@@ -31,9 +22,11 @@ function Header() {
         
         </div>
         <div className='header__center'>
-        <input type="text" placeholder='Search' value={searchTerm} onChange={(e)=>setSearchTerm(e.target.value)} />
+        <input type="text" placeholder='Search' 
+        value={searchTerm} 
+        onChange={(e)=>setSearchTerm(e.target.value)} />
         <Link to={`/search/${searchTerm}`}>
-        <SearchIcon onClick={handleSearch()}/>
+        <SearchIcon />
         </Link>
         
          </div>
