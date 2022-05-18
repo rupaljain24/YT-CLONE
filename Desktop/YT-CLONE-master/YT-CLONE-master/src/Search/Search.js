@@ -3,8 +3,7 @@ import './Search.css'
 import { useParams } from 'react-router';
 import ChannelRow from './ChannelRow';
 import VideoRow from './VideoRow';
-// import TuneOutlinedIcon from "@material-ui/core/TuneOutlined"
-// import TuneOutlinedIcon from '@mui/icons-material/TuneOutlined';
+import { Link } from "react-router-dom";
 import TuneIcon from '@material-ui/icons/Tune';
 import axios from 'axios';
 
@@ -16,10 +15,10 @@ function Search() {
     const newterm=searchTerm.term;
    
     const fetchChannel=()=>{
-        axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&type=channel&q=${searchTerm}&safeSearch=none&key=AIzaSyA3eeldWJ_fFubKEdB4M6XaGk-7RIgHOt8`)
+        axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&type=channel&q=${newterm}&safeSearch=none&key=AIzaSyA3eeldWJ_fFubKEdB4M6XaGk-7RIgHOt8`)
         .then((response)=>{
             setChannelData(response.data.items[0])
-            //console.log(response.data.items[0])
+            console.log(response.data.items[0])
         })
         .catch((error)=>console.log(error))
     }
@@ -27,7 +26,7 @@ function Search() {
         axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=9&type=video&q=${newterm}&safeSearch=none&key=AIzaSyA3eeldWJ_fFubKEdB4M6XaGk-7RIgHOt8`)
         .then((response)=>{
             setVideoData(response.data.items)
-            console.log(response.data)
+            //console.log(response.data)
         })
         .catch((error)=>console.log(error))
     }
@@ -46,12 +45,16 @@ function Search() {
             <hr/>
             <ChannelRow channeldata={channeldata}/>
             <hr/>
-            {/* {
+            {
                 videodata.map((item)=>{
-                    return <VideoRow key={item.id} {...item}/>
+                    return(
+                        <Link key={item.id} to={`/video/${item.id}`}>
+                        <VideoRow key={item.id} {...item}/>
+                        </Link>
+                    ) 
                 //   return  console.log(video)
                 })
-            } */}
+            }
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import Videocard from "./Videocard";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Videos.css";
 import axios from "axios";
 
@@ -25,7 +26,13 @@ const Videos = () => {
       <h2>Recommended videos</h2>
       <div className="recommended_videos">
         {videoList.map((item) => {
-          return <Videocard key={item.id} {...item} />;
+          return(
+            <Link key={item.id} to={`/video/${item.id}`}>
+          <Videocard key={item.id} {...item} />
+          </Link>
+         )
+          
+
         })}
       </div>
     </div>

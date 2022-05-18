@@ -1,0 +1,25 @@
+.channelRow{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.channelRow_avatar{
+    width: 136px !important;
+    height: 136px !important;
+    margin: 1.5rem 0rem;
+}
+.channelRow_desc{
+    width: 300px;
+}
+.channel_subscribe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:2rem ;
+}
+.subscribe_btn{
+    color:rgb(82, 79, 79);
+    background-color:lightgrey;
+    cursor: pointer;
+    border: none;
+}
