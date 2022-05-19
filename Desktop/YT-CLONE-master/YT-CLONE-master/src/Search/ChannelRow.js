@@ -12,7 +12,8 @@ function ChannelRow(props) {
     let subscriber=subs?.subscriberCount;
     let videocount=subs?.videoCount;    
     let snippet=props.channeldata?.snippet;
-    let channelId=snippet?.channelId;
+    //let channelId=snippet?.channelId;
+    let channelId=props.channeldata?.id.channelId;
     let description=snippet?.description;
     let channelTitle=snippet?.title;
     let avatarImg=snippet?.thumbnails?.default?.url;

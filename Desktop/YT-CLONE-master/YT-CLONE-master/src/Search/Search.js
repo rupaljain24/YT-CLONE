@@ -10,7 +10,7 @@ import axios from 'axios';
 
 function Search() {
     const searchTerm=useParams();
-    const [channeldata,setChannelData]=useState('');
+    const [channeldata,setChannelData]=useState({});
     const [videodata,setVideoData]=useState([]);
     const newterm=searchTerm.term;
    

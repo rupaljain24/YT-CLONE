@@ -31,9 +31,7 @@ function App() {
         <Routes>
           <Route path="/video/:videoId" element={
           <div className="app__main">
-              <Sidebar />
               <VideoplayerScreen/>
-              {/* <Videoplayer/> */}
             </div>}> 
           </Route>
         </Routes>

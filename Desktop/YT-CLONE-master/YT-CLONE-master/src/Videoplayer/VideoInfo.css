@@ -1,0 +1,9 @@
+.video_statistics{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.video_statistics .likes_column{
+    display: flex;
+
+}
